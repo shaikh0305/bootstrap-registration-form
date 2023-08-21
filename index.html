@@ -10,11 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Hello, world!</title>
 
-      <!--<style> 
-           .container{
-               
-           }
-      </style> -->
+    <style>
+
+        .button{
+            background:#0d6efd ;
+            transition: all .1s ease;
+        }
+        .button:hover{
+            background: green;
+        }
+
+        .custom-pointer{
+            cursor: pointer;
+        }        
+    </style>
 
 
   </head>
@@ -82,58 +91,57 @@
 
     <div class="container position-absolute top-50 start-50 translate-middle col-5 p-5">
         <div>
-            <form class="form-control " action="">
-                <h2 class="text-center fs-3  mb-5">Registration Form</h2>
-                <div class="input-name mx-auto m-3">
-                    <i class="fa fa-user lock  text-info"></i>
-                    <input type="First name" placeholder="First name" class="name">
-                    <span>
-                        <i class="fa fa-user lock  text-info"></i>
-                        <input type="last name" placeholder="Last name" class="name ">
-                    </span>
-                </div>
+            <form class="form-control shadow" action="">
+                <h2 class="text-center fs-3  pb-4 mt-2 ">Registration Form</h2>
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text"><span><i class="fa fa-user lock  text-primary"></i></span></span>
+                    <input type="text" aria-label="First name" placeholder="First name" class="form-control">
+                    <span class="input-group-text"><span><i class="fa fa-user lock  text-primary"></i></span></span>
+                    <input type="text" aria-label="Last name"placeholder="Last name" class="form-control">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-envelope email text-primary"></i></span>
+                    <input type="email" aria-label="email"placeholder="Email" class="form-control">
+                  </div>
+
+                
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-lock lock text-primary"></i></span>
+                    <input type="password" aria-label="password" placeholder="Password" class="form-control">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-lock lock text-primary"></i></span>
+                    <input type="password" aria-label="password" placeholder="Confirm Password" class="form-control">
+                  </div>
 
                 <div class="input-name mx-auto m-3">
-                    <i class="fa fa-envelope email text-info"></i>
-                    <input type="EMAIL"email placeholder="Email" required class="text-name w-75 ">
-                </div>
-
-                <div class="input-name mx-auto m-3 ">   
-                    <i class="fa fa-lock lock text-info"></i>
-                    <input type="Password" placeholder="Password" required class="text-name w-75">
-                </div>
-
-                <div class="input-name mx-auto m-3">
-                    <i class="fa fa-lock lock text-info"></i>
-                    <input type="password" placeholder="Confirm Password" required class="text-name w-75">
-                </div>
-
-                <div class="input-name mx-auto m-3">
-                    <input type="radio" name="r1" class="radio-button">
+                    <input type="radio" name="r1" class="radio-button custom-pointer"checked>
                     <label style="margin-right: 30px;">Male</label>
 
-                    <input type="radio" name="r1" class="radio-button">
+                    <input type="radio" name="r1" class="radio-button custom-pointer">
                     <label>Female</label>
                 </div>
 
                 <div class="input-name mx-auto m-3 ">
-                    <select class="country w-100 text-muted">
-                        <option>Select a Country</option>
-                        <option>india</option>
-                        <option>nepal</option>
-                        <option>bhutan</option>
-                        <option>japan</option>
-                    </select>  
+                    <select class="form-select custom-pointer" aria-label="Default select example">
+                        <option selected>Select a Country</option>
+                        <option value="1">India</option>
+                        <option value="2">Nepal</option>
+                        <option value="3">Bhutan</option>
+                        <option value="4">Japan</option>
+                      </select>  
                     
                     <div class="arrow"></div>
                 </div>
 
-                <div class="input-name mx-auto m-3">
-                    <input type="checkbox" id="cb" class="check-button">
-                    <label for="cb" class="check" style="margin-right: 5px;">i accept the terms and conditions</label>
-                 </div>
-                 <div class="input-name mx-auto m-3 text-center" >
-                    <input type="submit" value="Register" class="button bg-info text-Dark w-100">
+                <div class="form-check checkbox-xl">
+                    <input class="form-check-input custom-pointer"  type="checkbox" value="" id="checkbox-3" checked/>
+                    <label class="form-check-label " for="checkbox-3">i accept the terms and conditions</label>
+                  </div>
+                 <div class="input-name mx-auto m-3 text-center " >
+                    <input type="submit" value="Register" class=" button  text-white fs-5 lh-base col-12 border-0 mb-3  " style="height: 35px;">
                  </div>
 
             </form>
